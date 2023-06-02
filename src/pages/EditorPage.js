@@ -82,6 +82,7 @@ const EditorPage = () => {
   }
 
   function leaveRoom() {
+    socketRef.current.emit("delete_file");
     reactNavigator("/");
   }
   const handleSubmit = async (e) => {
@@ -107,7 +108,7 @@ const EditorPage = () => {
       }
     });
     
-    socketRef.current.emit("delete_file");
+    
    
     
     
